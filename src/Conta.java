@@ -36,7 +36,7 @@ public abstract class Conta {
 	}
 
 	public void transfere(double valor, Conta destino) {
-		System.out.println("Valor da Transferência: ");
+		System.out.println("Valor da Transferencia: ");
 		valor = digite.nextDouble();
 		
 		if (saldo > valor) {
@@ -46,6 +46,7 @@ public abstract class Conta {
 			System.out.println("Saldo: " + getSaldo());
 		} else {
 			System.out.println("Erro");
+			digite.close();
 		}
 	}
 
