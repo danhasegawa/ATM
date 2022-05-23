@@ -9,17 +9,6 @@ public abstract class Conta {
 
 	Scanner digite = new Scanner(System.in);
 
-	public double depositoInicial(double valor) {
-		if (valor < 50) {
-			System.out.println("Erro, valor inicial minimo R$50.0");
-			return valor;
-
-		} else {
-			return saldo = saldo + valor;
-		}
-
-	}
-
 	public void depositar(double valor) {
 		valor = digite.nextDouble();
 		this.saldo += valor;
@@ -38,9 +27,9 @@ public abstract class Conta {
 	public void transfere(double valor, Conta destino) {
 		System.out.println("Valor da Transferencia: ");
 		valor = digite.nextDouble();
-		
+
 		if (saldo > valor) {
-			this.sacar(valor);
+			this.saldo -= valor;
 			destino.depositar(valor);
 			System.out.println("Transferindo valor... " + valor);
 			System.out.println("Saldo: " + getSaldo());

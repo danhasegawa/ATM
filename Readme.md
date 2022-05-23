@@ -1,7 +1,12 @@
 Simulating an ATM.
+
 Create an account.
+
 Withdraw
+
 Deposit
+
 Wire
 
-It's not finished yet, trying to solve some errors and improve the code.
+
+It's not finished yet, trying improve the code.

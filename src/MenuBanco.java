@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class MenuBanco extends Conta {
 
+	
 	Scanner digite = new Scanner(System.in);
 
 	public void iniciar() {
@@ -33,6 +34,7 @@ public class MenuBanco extends Conta {
 
 	public void escolheOpcao(int opcao) {
 
+		
 		switch (opcao) {
 		case 1:
 			menuCriarConta();
@@ -54,6 +56,7 @@ public class MenuBanco extends Conta {
 		case 5:
 			Conta destino = null;
 			super.transfere(valor, destino);
+			
 			break;
 		case 6:
 			System.out.println("Sistema Encerrado");
@@ -99,9 +102,13 @@ public class MenuBanco extends Conta {
 		}
 		
 	}
+	public static void main(String[] args) {
+		
+		
+		MenuBanco menu = new MenuBanco();
+		menu.iniciar();
 
 }
 
-
 	
-
+}
