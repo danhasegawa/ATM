@@ -24,29 +24,7 @@ public abstract class Conta {
 		}
 	}
 
-	public void transfere(double valor, Conta destino) {
-		System.out.println("Valor da Transferencia: ");
-		valor = digite.nextDouble();
-		
-		try {
-			if (saldo > valor) {
-				this.saldo -= valor;
-				destino.depositar(valor);
-				System.out.println("Transferindo valor... " + valor);
-				System.out.println("Saldo: " + getSaldo());
-			} else {
-				System.out.println("Erro");
-				digite.close();
-			}
-		} catch (NullPointerException e) {
-			System.out.println("NullPointerException");
-			
-		}
-		
-
-		
 	
-	}
 
 	public double getSaldo() {
 		return this.saldo;

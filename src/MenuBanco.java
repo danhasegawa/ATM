@@ -3,10 +3,12 @@ import java.util.Scanner;
 public class MenuBanco extends Conta {
 
 	
+	
 	Scanner digite = new Scanner(System.in);
 
 	public void iniciar() {
 		int opcao;
+		
 
 		do {
 			exibeMenu();
@@ -24,8 +26,7 @@ public class MenuBanco extends Conta {
 		System.out.println("| 2- CONSULTAR SALDO           |");
 		System.out.println("| 3- SAQUE                     |");
 		System.out.println("| 4- DEPOSITO                  |");
-		System.out.println("| 5- TRANSFERENCIA             |");
-		System.out.println("| 6- SAIR                      |");
+		System.out.println("| 5- SAIR                      |");
 		System.out.println("|------------------------------|");
 		System.out.println("");
 		System.out.print("Selecione a operacao desejada: ");
@@ -33,6 +34,8 @@ public class MenuBanco extends Conta {
 	}
 
 	public void escolheOpcao(int opcao) {
+		
+		
 
 		
 		switch (opcao) {
@@ -53,12 +56,8 @@ public class MenuBanco extends Conta {
 			System.out.println();
 			super.depositar(valor);
 			break;
+		
 		case 5:
-			Conta destino = null;
-			super.transfere(valor, destino);
-			
-			break;
-		case 6:
 			System.out.println("Sistema Encerrado");
 			break;
 		default:
